@@ -7,6 +7,6 @@ async def main():
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=False)
         page = await browser.new_page()
-        await automation_service.navigate_to_web(page)
+        await automation_service.navigate_to_login(page)
         
 asyncio.run(main())
